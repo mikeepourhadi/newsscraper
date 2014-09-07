@@ -31,9 +31,12 @@ GEM
     i18n (0.6.11)
     ice_nine (0.11.0)
     json (1.8.1)
+    mini_portile (0.6.0)
     minitest (5.4.1)
     multi_json (1.10.1)
     multi_xml (0.5.5)
+    nokogiri (1.6.2.1)
+      mini_portile (= 0.6.0)
     rack (1.5.2)
     rack-accept (0.4.5)
       rack (>= 0.4)
@@ -61,5 +64,6 @@ PLATFORMS
 DEPENDENCIES
   grape
   json
+  nokogiri
   rack
   sinatra
