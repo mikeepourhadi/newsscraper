@@ -22,4 +22,7 @@ links = []
 
 rss.items.each { |item| links << item.link }
 
-puts links
+links.each do |article_link|
+	doc = Nokogiri::HTML(open(article_link))
+	puts doc.css('#storytext p')
+end
