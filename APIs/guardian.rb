@@ -1,7 +1,7 @@
 class Guardian
 
-	def self.get_categories
-		make_http_request("http://api.feedzilla.com/v1/categories.json")
+	def self.sections
+		JSON.parse(make_http_request("http://content.guardianapis.com/sections"))
 	end
 
 	def self.get_articles_for_specific_category(selected_category_id)
