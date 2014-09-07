@@ -2,7 +2,7 @@ require 'rss'
 require 'open-uri'
 require 'nokogiri'
 
-class RSSParser
+class RSSParserSuperclass
 	attr_reader :feed_link, :links_to_articles
 	def initialize(feed_link)
 		@feed_link = feed_link
@@ -31,7 +31,7 @@ class RSSParser
 
 end
 
-rss = RSSParser.new("http://www.npr.org/rss/rss.php?id=1003")
+rss = RSSParserSuperclass.new("http://www.npr.org/rss/rss.php?id=1003")
 rss.parse_rss_feed
 rss.retrieve_article_links
 rss.parse_article_text
