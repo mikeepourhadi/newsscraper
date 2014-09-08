@@ -32,6 +32,7 @@ end
 require_relative 'article.rb'
 require_relative 'npr.rb'
 require_relative 'bbc.rb'
+require_relative 'politico.rb'
 
 #runner for NPR
 # npr = NPR.new("http://www.npr.org/rss/rss.php?id=1001")
@@ -46,3 +47,11 @@ require_relative 'bbc.rb'
 # bbc.retrieve_article_links
 # bbc.parse_article_text
 # bbc.parsed_articles.each { |article| p article }
+
+#runner for politico
+politico = Politico.new("http://www.politico.com/rss/politicopicks.xml")
+politico.parse_rss_feed
+politico.retrieve_article_links
+politico.parse_article_text
+politico.parsed_articles.each { |article| p article }
+
