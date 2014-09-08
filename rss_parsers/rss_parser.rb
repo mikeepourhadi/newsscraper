@@ -41,8 +41,8 @@ require_relative 'bbc.rb'
 # npr.parsed_articles.each { |article| p article }
 
 #runner for BBC
-bbc = BBC.new("http://www.npr.org/rss/rss.php?id=1001")
-bbc.parse_rss_feed
-bbc.retrieve_article_links
-bbc.parse_article_text
-bbc.parsed_articles.each { |article| p article }
+# bbc = BBC.new("http://feeds.bbci.co.uk/news/rss.xml")
+# bbc.parse_rss_feed
+# bbc.retrieve_article_links
+# bbc.parse_article_text
+# bbc.parsed_articles.each { |article| p article }
