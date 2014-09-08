@@ -1,0 +1,4 @@
+class NPRParser < RSSParserSuperclass
+
+
+end
