@@ -25,4 +25,19 @@ class NewsScraper < Grape::API
 		end
 	end
 
+	resource :rss do 
+		desc "Returns top news articles from aggregrated RSS feeds"
+		get do 
+			articles = []
+
+			bbc = BBC.new("http://feeds.bbci.co.uk/news/rss.xml")
+			bbc.parse_rss_feed
+			bbc.retrieve_article_links
+			bbc.parse_article_text
+			bbc.parsed_articles.each {|article| articles << article.to_hash}
+			
+			return articles.to_json
+		end
+	end
+
 end

@@ -7,4 +7,15 @@ class Article
 		@body_content = article_details[:body_content]
 		@site = article_details[:site]
 	end
+
+	def to_hash
+		hashed_article = {
+			title: self.title,
+			author: self.author,
+			date: self.date,
+			body_content: self.body_content,
+			site: self.site
+		} 
+	end
+
 end

@@ -11,6 +11,6 @@ require ::File.expand_path('../APIs/guardian',  __FILE__)
 require ::File.expand_path('../Grape/newsscraper',  __FILE__)
 
 # Superclass for RSS parsers
-require ::File.expand_path('../rss_parsers/rss_parser_superclass', _FILE_)
+require ::File.expand_path('../rss_parsers/rss_parser', __FILE__)
 
 run Rack::Builder.new(NewsScraper)

@@ -1,5 +1,6 @@
 require 'grape'
 require 'net/http'
 require 'json'
-require 'guardian-content'
 require 'nokogiri'
+require 'open-uri'
+require 'rss'

@@ -34,14 +34,14 @@ require_relative 'npr.rb'
 require_relative 'bbc.rb'
 require_relative 'politico.rb'
 
-#runner for NPR
+# runner for NPR
 # npr = NPR.new("http://www.npr.org/rss/rss.php?id=1001")
 # npr.parse_rss_feed
 # npr.retrieve_article_links
 # npr.parse_article_text
 # npr.parsed_articles.each { |article| p article }
 
-#runner for BBC
+# runner for BBC
 # bbc = BBC.new("http://feeds.bbci.co.uk/news/rss.xml")
 # bbc.parse_rss_feed
 # bbc.retrieve_article_links
@@ -49,9 +49,9 @@ require_relative 'politico.rb'
 # bbc.parsed_articles.each { |article| p article }
 
 #runner for politico
-politico = Politico.new("http://www.politico.com/rss/politicopicks.xml")
-politico.parse_rss_feed
-politico.retrieve_article_links
-politico.parse_article_text
-politico.parsed_articles.each { |article| p article }
+# politico = Politico.new("http://www.politico.com/rss/politicopicks.xml")
+# politico.parse_rss_feed
+# politico.retrieve_article_links
+# politico.parse_article_text
+# politico.parsed_articles.each { |article| p article }
 
