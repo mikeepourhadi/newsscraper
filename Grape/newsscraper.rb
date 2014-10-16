@@ -31,9 +31,7 @@ class NewsScraper < Grape::API
 			articles = []
 
 			bbc = BBC.new("http://feeds.bbci.co.uk/news/rss.xml")
-			bbc.parse_rss_feed
-			bbc.retrieve_article_links
-			bbc.parse_article_text
+			bbc.run
 			bbc.parsed_articles.each {|article| articles << article.to_hash}
 			
 			return articles.to_json
