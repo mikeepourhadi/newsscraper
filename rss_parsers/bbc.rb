@@ -1,5 +1,3 @@
-require_relative 'rss_parser'
-
 class BBC < RSSParser
 
 	def parse_article_text 
