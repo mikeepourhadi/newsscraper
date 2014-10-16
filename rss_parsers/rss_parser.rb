@@ -2,7 +2,7 @@ require 'rss'
 require 'open-uri'
 require 'nokogiri'
 
-class RSSParser
+class RSSParser::Base
 	attr_reader :feed_link, :links_to_articles, :parsed_articles
 	def initialize(feed_link)
 		@feed_link = feed_link
