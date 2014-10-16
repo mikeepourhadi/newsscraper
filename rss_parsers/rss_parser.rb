@@ -12,7 +12,7 @@ class RSSParser
 		@parsed_articles = []
 	end
 
-	def run
+	def parse!
 		self.parse_rss_feed
 		self.retrieve_article_links
 		self.parse_article_text
