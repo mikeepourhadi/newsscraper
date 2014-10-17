@@ -2,7 +2,7 @@ require 'rss'
 require 'open-uri'
 require 'nokogiri'
 
-class RSSParser::Base
+class RSSParser
 	attr_reader :feed_link, :links_to_articles, :parsed_articles
 	def initialize(feed_link)
 		@feed_link = feed_link
@@ -37,11 +37,6 @@ class RSSParser::Base
 	protected :parse_article_text
 
 end
-
-require_relative 'article.rb'
-require_relative 'npr.rb'
-require_relative 'bbc.rb'
-require_relative 'politico.rb'
 
 # runner for NPR
 # npr = NPR.new("http://www.npr.org/rss/rss.php?id=1001")

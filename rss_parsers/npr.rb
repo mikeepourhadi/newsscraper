@@ -1,4 +1,4 @@
-class NPR < RSSParser::Base
+class NPR < RSSParser
 
 	def parse_article_text 
 		links_to_articles.each do |article_link|

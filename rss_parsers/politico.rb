@@ -1,4 +1,4 @@
-class Politico < RSSParser::Base
+class Politico < RSSParser
 
 	def parse_article_text 
 		links_to_articles.each do |article_link|
